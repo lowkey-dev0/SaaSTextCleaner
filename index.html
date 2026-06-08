@@ -6,20 +6,35 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <h2>Text Cleaner</h2>
+    <div class="app">
+      <header class="app-header">
+        <h1>Text Cleaner</h1>
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">
+          🌗
+        </button>
+      </header>
 
-      <textarea id="input" placeholder="Paste your text here..."></textarea>
+      <main class="card">
+        <section class="field">
+          <label for="input">Original text</label>
+          <textarea id="input" placeholder="Paste your text here..."></textarea>
+        </section>
 
-      <div class="button-row">
-        <button id="cleanBtn">Clean</button>
-        <button id="copyBtn">Copy</button>
-      </div>
+        <div class="actions">
+          <button id="cleanBtn" class="primary">Clean</button>
+          <button id="copyBtn" class="secondary">Copy</button>
+        </div>
 
-      <textarea
-        id="output"
-        placeholder="Cleaned text will appear here..."
-      ></textarea>
+        <section class="field">
+          <label for="output">Cleaned text</label>
+          <textarea
+            id="output"
+            placeholder="Cleaned text will appear here..."
+          ></textarea>
+        </section>
+
+        <p id="status" class="status"></p>
+      </main>
     </div>
 
     <script src="script.js"></script>
